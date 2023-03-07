@@ -230,11 +230,15 @@ miCamino.subiendoAlEverest.forEach((e) => {
     })
   })
 })
-miCamino.material.forEach((e , i) => {
-  for(const obj of e.imagenes){
-    console.log(obj);
-  }
+miCamino.material.forEach((e) => {
+  e.imagenes.forEach(((imagen) => {
+    for(const j in imagen){
+      console.log(j);
+    }
+  }))
 })
+
+
 let altitudTotal = 0;
 let totalElementos = 0;
 miCamino.cimas.forEach((e , i) => {
